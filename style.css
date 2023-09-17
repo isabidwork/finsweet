@@ -3,6 +3,7 @@
     margin: 0%;
     box-sizing: border-box;
 }
+/*Header Section Styling*/
 header{
     width: 80%;
     display: flex;
@@ -10,6 +11,9 @@ header{
     align-items: center;
     margin: auto;
     padding: 10px 10px;
+    left: 10%;
+    position: fixed;
+    z-index: 1000;
 }
 header nav{
     display: flex;
@@ -34,32 +38,78 @@ header nav .right-contact-text{
     font-size: 14px;
     line-height: 18px;
 }
-main{
-    height: 80vh;
+/*end of header styling*/
+
+/*Global Section Styling*/
+.parent-flex{
+    height: 100vh;
     width: 80%;
     display: flex;
-    flex-direction: column;
     margin: auto;
-    align-items: center;
-        
+    align-items: center;  
+    justify-content: center; 
 }
-main .content{
+.container{
     height: 80%;
-    width: 100%;
+    width: 80%;
     display: flex;
 }
-main .content .left-text{
+.left{
     height: 100%;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 20px;
-    color: black;
+}
+.right{
+    height: 100%;
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+}
+.service-left{
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 15px;
+}
+.service-right{
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 15px;
+}
+h1{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 45px;
+}
+/*End of Global Styling*/
+
+/*Main Section Styling*/
+main{
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    margin: auto;
+    align-items: center;   
+}
+main .container{
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+main .container .left-text{
     padding: 45px;
     margin-top: 55px;
 }
-main .content .left-text .botton-service{
+main .container .left-text .botton-service{
     width: 203px;
     height: 64px;
     font-size: 15px;
@@ -69,39 +119,197 @@ main .content .left-text .botton-service{
     border-color: transparent;
     color: white;
     padding: 16px 40px 16px 40px;
-    gap: 10px;
-       
-  }
-main .content .left-text .subtitle{
+    gap: 10px;       
+}
+.botton-service:hover{
+transform:scale(1.1);
+background-color:black;
+}
+main .container .left-text .subtitle{
     font-size: 20px;
     color:#939191;
     text-align: center;   
     left: 10%;
     padding: 35px;
 }
-main .content .left-text .subsubtitle{
+main .container .left-text .subsubtitle{
     font-size: 20px;
     color: black;
     text-align: center;
     
 }
-main .content .right-img{
-    height: 100%;
-    width: 50%; 
+main .container .right-img{
     background-image: url("Image.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;  
-    margin-top: 45px;
+    margin-top: 45px;   
 }
-main .content .right-img .service{
+main .container .right-img .service{
     position: absolute;
     left: -13%;
     top:0%
 }
-main .content .right-img .rating{
+main .container .right-img .rating{
     position: absolute;
     right: -13%;
     margin-top: 40%;  
+}
+/*Car Servicing Section*/
+.car-service-bg{
+    background-color:#E2E6E9;
+}
+input{
+    width: 100%;
+    height: 8vh;
+    margin-top: 5px;
+    border: none;
+}
+.botton-quote{
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    background-color:#FF6433;
+    border-radius: 12px;
+    box-shadow: 1px;
+    border-color: transparent;
+    color: white;
+    padding: 16px 40px 16px 40px;
+    gap: 10px; 
+    margin-top: 25px;  
+}
+.botton-quote:hover{
+    transform:scale(1.1);
+    background-color:black;
+}
+/*Car Quote Section*/
+.car-quote-bg{
+    background-color: white;
+}
+/*What we offer Section*/
+#what-we-offer{
+    background-color: #f2f2f2; 
+}
+#what-we-offer .content{
+   text-align: center;
+   width: 100%;
+   
+}
+#what-we-offer .content .we-offer-cards{
+    display: flex;  
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#what-we-offer .content .we-offer-cards .card{
+    background-color: white;
+    height: 200px;
+    width: 170px;
+}
+#what-we-offer .content .we-offer-cards .card .content-bg{
+    background-color: #FF6433;
+    display: flex;
+    height: 200px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+/*Get in touch section*/
+#get-in-touch{
+    height: 70vh;
+    width: 100%;  
+    background-color: #F2F2F2;
+}
+#get-in-touch .first-row{
+    height: 75%;
+    width: 100%;
+    display: flex;
+}
+#get-in-touch .first-row .left-car{
+    height: 100%;
+    width: 50%;
+    background-image: url("carleft.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+}
+.button3{
+    width: 150px;
+    height: 50px;
+    font-size: 10px;
+    background-color: black;
+    border-color: transparent;
+    color: white;
+    padding: 16px 40px 16px 40px;
+    gap: 10px; 
+    margin-top: 25px;  
+    cursor: pointer; 
+}
+#get-in-touch .first-row .left-car .left-car-card{
+    height: 100%;
+    width: 70%; 
+    background-color: #FF6433;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    color: white;
+}
+#get-in-touch .first-row .right-car{
+    height: 100%;
+    width: 50%;
+    background-image: url("rightimage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#get-in-touch .second-row{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#get-in-touch .second-row .container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color:#661CE7;
+}
+/*Footer Top section Styling*/
+.footer-bg1{
+  background-color: #1E1B1B;
+  color: white;
+  display: flex;
+  width: 100%;
+}
+.footer-bg1.left{
+    column-gap: 25px;
+}
+/*footer bottom section styling*/
+.footer-bg2{
+    background-color: black;
+    width: 100%;
+    height: 25vh;
+    color: white;
+}
+.footer-bg2 .right .service-right-right nav{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.footer-bg2 .right .service-right-right nav ul{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 5px 20px 5px 0;
+}
+.footer-bg2 .right .service-right-right nav ul li{
+    list-style: none;
 }
