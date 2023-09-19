@@ -43,7 +43,7 @@ header nav .right-contact-text{
 /*Global Section Styling*/
 .parent-flex{
     height: 100vh;
-    width: 80%;
+    width: 100%;
     display: flex;
     margin: auto;
     align-items: center;  
@@ -96,7 +96,7 @@ h1{
 /*Main Section Styling*/
 main{
     height: 100vh;
-    width: 80%;
+    width: 100%;
     display: flex;
     margin: auto;
     align-items: center;   
